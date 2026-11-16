@@ -1,5 +1,7 @@
 # TripPilot
 
+[![Checks](https://github.com/cylaura2/trippilot/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/cylaura2/trippilot/actions/workflows/checks.yml)
+
 **An itinerary copilot that turns natural-language travel plans into a grounded, editable schedule—with human confirmation where it matters.**
 
 TripPilot combines LLM workflow orchestration with live place/routing APIs and deterministic schedule validation. It preserves supplied bookings, surfaces ambiguous locations, and streams checks into the itinerary rather than treating generated text as a verified plan.
@@ -124,7 +126,7 @@ uv run pytest -q
 pnpm --dir frontend build
 ```
 
-The current offline suite has **168 passing tests** covering itinerary contracts, booking preservation, ambiguous places, constrained tool use, schedule arithmetic, missing-time proposals, streaming, checkpoint recovery, provider failures, and trip-library persistence/version conflicts. Tests mock external services and do not require API keys. The frontend build includes TypeScript checking. CI runs these checks on pushes and pull requests; the first GitHub run still needs to be observed after publication.
+The current offline suite has **168 passing tests** covering itinerary contracts, booking preservation, ambiguous places, constrained tool use, schedule arithmetic, missing-time proposals, streaming, checkpoint recovery, provider failures, and trip-library persistence/version conflicts. Tests mock external services and do not require API keys. The frontend build includes TypeScript checking. GitHub Actions runs the same checks on Ubuntu for pushes and pull requests.
 
 Browser smoke checks exercise generation, location confirmation, edit/recheck, map synchronization, Google Maps links, and save/rename/duplicate/delete/undo. These are manual checks, not an automated browser suite.
 
