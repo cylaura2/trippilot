@@ -1,0 +1,24 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.data/
+.streamlit/secrets.toml
+.DS_Store
+node_modules/
+.pnpm-store/
+frontend/dist/
+# Local databases/backups and private key material, even outside .data.
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pem
+*.p12
+*.key
+
+# Keep original large screen recordings out of source history.
+*.mov
